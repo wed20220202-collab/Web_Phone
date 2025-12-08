@@ -7,61 +7,24 @@
 </head>
 <body>
 
-  <div class="radio-wrap">
-    <!-- アンテナ -->
-    <div class="antenna"></div>
+  <div class="container">
+    <h1>🎙 トランシーバー通話</h1>
 
-    <!-- 本体 -->
-    <div class="radio-body">
-      <!-- 上部ロゴっぽい部分 -->
-      <div class="radio-head">
-        <span class="radio-brand">WEB-COM</span>
-      </div>
-
-      <!-- 画面 -->
-      <div class="radio-screen">
-        <div class="screen-row">
-          <span class="screen-label">CH</span>
-          <span id="screen-ch" class="screen-ch">01</span>
-        </div>
-        <div class="screen-row small">
-          <span>STATUS</span>
-          <span id="screen-status">待機中</span>
-        </div>
-      </div>
-
-      <!-- ボタンエリア -->
-      <div class="radio-buttons">
-        <div class="btn-row">
-          <button id="power-btn" class="btn small">電源/マイク</button>
-        </div>
-        <div class="btn-row">
-          <button id="ch-down" class="btn circle">▼</button>
-          <span class="ch-label">CH</span>
-          <button id="ch-up" class="btn circle">▲</button>
-        </div>
-        <div class="btn-row">
-          <button id="create-btn" class="btn wide green">📡 送信開始</button>
-        </div>
-        <div class="btn-row">
-          <button id="join-btn" class="btn wide blue">🔗 受信参加</button>
-        </div>
-        <div class="btn-row">
-          <button id="hangup-btn" class="btn wide red">🛑 切断</button>
-        </div>
-      </div>
-
-      <!-- スピーカーグリルっぽい部分 -->
-      <div class="radio-speaker">
-        <div class="dot-grid"></div>
-      </div>
+    <div class="control">
+      <label>ルームID</label>
+      <input id="room-id" type="text" placeholder="例: radio123">
     </div>
+
+    <div class="buttons">
+      <button id="start-btn" class="btn primary">🎤 マイクON</button>
+      <button id="create-btn" class="btn green">📡 ルーム作成</button>
+      <button id="join-btn" class="btn blue">🔗 参加</button>
+      <button id="hangup-btn" class="btn red">🛑 切断</button>
+    </div>
+
+    <div id="status" class="status">ステータス: 待機中</div>
   </div>
 
-  <!-- ルームID入力（見えないけど内部で使う） -->
-  <input id="room-id" type="hidden" />
-
-  <!-- Firebase ＋ アプリ -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
   <script src="app.js"></script>
