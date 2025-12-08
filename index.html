@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>トランシーバー通話</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎙 トランシーバー通話</h1>
+
+    <div class="control">
+      <label>ルームID</label>
+      <input id="room-id" type="text" placeholder="例: radio123">
+    </div>
+
+    <div class="buttons">
+      <button id="start-btn" class="btn primary">🎤 マイクON</button>
+      <button id="create-btn" class="btn green">📡 ルーム作成</button>
+      <button id="join-btn" class="btn blue">🔗 参加</button>
+      <button id="hangup-btn" class="btn red">🛑 切断</button>
+    </div>
+
+    <div id="status" class="status">ステータス: 待機中</div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
