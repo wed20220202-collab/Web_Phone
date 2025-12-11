@@ -10,10 +10,24 @@
   <div class="container">
     <h1>🎙 トランシーバー通話</h1>
 
-    <div class="control">
-      <label>ルームID</label>
-      <input id="room-id" type="text" placeholder="例: radio123">
-    </div>
+<div class="control">
+  <label>チャンネル (CH)</label>
+  <select id="channel-select">
+    <option value="01">CH01</option>
+    <option value="02">CH02</option>
+    <option value="03">CH03</option>
+    <option value="04">CH04</option>
+    <option value="05">CH05</option>
+    <option value="06">CH06</option>
+    <option value="07">CH07</option>
+    <option value="08">CH08</option>
+    <option value="09">CH09</option>
+    <option value="10">CH10</option>
+  </select>
+
+  <!-- 実際に使うルームID（非表示） -->
+  <input id="room-id" type="hidden">
+</div>
 
     <div class="buttons">
       <button id="start-btn" class="btn primary">🎤 マイクON</button>
